@@ -1,326 +1,671 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyShare - Nền Tảng Chia Sẻ Học Liệu Bách Khoa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .bg-cream {
+        background-color: #fefef9;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyShare - Nền Tảng Chia Sẻ Học Liệu Bách Khoa</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    .bg-cream {
-      background-color: #fefef9;
-    }
+      .text-darken {
+        color: #2d3748;
+      }
 
-    .text-darken {
-      color: #2d3748;
-    }
+      .bg-darken {
+        background-color: #1a202c;
+      }
+    </style>
+  </head>
 
-    .bg-darken {
-      background-color: #1a202c;
-    }
-  </style>
-</head>
-
-<body class="bg-cream text-darken">
-  <!-- NAV -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <span class="text-2xl font-bold text-darken">StudyShare</span>
+  <body class="bg-cream text-darken">
+    <!-- NAV -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <span class="text-2xl font-bold text-darken">StudyShare</span>
+        </div>
+        <ul class="flex space-x-6 text-darken font-semibold">
+          <li>
+            <a href="#features" class="hover:text-yellow-500">Tính Năng</a>
+          </li>
+          <li><a href="#tech" class="hover:text-yellow-500">Công Nghệ</a></li>
+          <li><a href="#team" class="hover:text-yellow-500">Nhóm</a></li>
+          <li><a href="#contact" class="hover:text-yellow-500">Liên Hệ</a></li>
+        </ul>
       </div>
-      <ul class="flex space-x-6 text-darken font-semibold">
-        <li><a href="#features" class="hover:text-yellow-500">Tính Năng</a></li>
-        <li><a href="#tech" class="hover:text-yellow-500">Công Nghệ</a></li>
-        <li><a href="#team" class="hover:text-yellow-500">Nhóm</a></li>
-        <li><a href="#contact" class="hover:text-yellow-500">Liên Hệ</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- HERO -->
-  <header class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white py-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h1 class="text-5xl font-bold mb-4">StudyShare - Học Cùng Nhau, Chia Sẻ Để Cùng Tiến Xa</h1>
-      <p class="text-xl mb-6 opacity-90">
-        Nền tảng chia sẻ học liệu và dụng cụ học tập dành riêng cho sinh viên Đại học Bách Khoa.
-      </p>
-      <div class="flex justify-center space-x-4">
-        <a href="#intro"
-          class="bg-white text-yellow-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Khám Phá
-          Ngay</a>
-        <a href="#contact"
-          class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-yellow-500 transition">Xem
-          Demo</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- GIỚI THIỆU -->
-  <section id="intro" class="max-w-7xl mx-auto px-6 py-12">
-    <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
-      <div>
-        <h2 class="text-4xl font-bold text-darken mb-6">Giới Thiệu StudyShare</h2>
-        <p class="text-lg text-gray-700 mb-4">
-          <strong>Vấn đề:</strong> Sinh viên đang chia sẻ học liệu rải rác trên nhiều nền tảng như Facebook, Zalo,
-          Telegram — khiến việc tìm kiếm tài liệu trở nên mất thời gian và thiếu hiệu quả.
+    <!-- HERO -->
+    <header
+      class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-4">
+          StudyShare - Học Cùng Nhau, Chia Sẻ Để Cùng Tiến Xa
+        </h1>
+        <p class="text-xl mb-6 opacity-90">
+          Nền tảng chia sẻ học liệu và dụng cụ học tập dành riêng cho sinh viên
+          Đại học Bách Khoa.
         </p>
-        <p class="text-lg text-gray-700 mb-4">
-          <strong>Giải pháp:</strong> StudyShare cung cấp không gian tập trung giúp sinh viên dễ dàng đăng, tìm và trao
-          đổi tài liệu, sách hoặc dụng cụ học tập.
-        </p>
-        <p class="text-lg text-gray-700">
-          <strong>Tầm nhìn:</strong> Trở thành nền tảng học liệu nội bộ uy tín cho sinh viên Bách Khoa, hướng tới mở
-          rộng toàn trường.
-        </p>
-      </div>
-      <div class="bg-yellow-100 rounded-lg p-8">
-        <img src="https://amzn-web-programming-bucket.s3.ap-southeast-2.amazonaws.com/instroduction.png" alt="StudyShare" class="rounded-lg shadow-lg"
-          onerror="this.src='https://via.placeholder.com/400x300?text=StudyShare'" />
-      </div>
-    </div>
-  </section>
-
-  <!-- TÍNH NĂNG -->
-  <section id="features" class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-xl shadow my-12">
-    <h2 class="text-4xl font-bold text-darken mb-12 text-center">Tính Năng Chính</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <div class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition" data-aos="fade-up">
-        <div class="mb-4">
-          <svg class="w-12 h-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-            </path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Quản Lý & Chia Sẻ Học Liệu</h3>
-        <p class="text-gray-700">
-          Đăng và tải xuống tài liệu, hình ảnh, giáo trình — được sắp xếp rõ ràng theo môn học và chủ đề.
-        </p>
-      </div>
-
-      <div class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-        <div class="mb-4">
-          <svg class="w-12 h-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Tìm Kiếm & Lọc Thông Minh</h3>
-        <p class="text-gray-700">
-          Tìm tài liệu theo từ khóa, tag, bộ môn hoặc loại học liệu. Gợi ý học liệu liên quan tự động.
-        </p>
-      </div>
-
-      <div class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
-        <div class="mb-4">
-          <svg class="w-12 h-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
-            </path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Đánh Giá & Trao Đổi</h3>
-        <p class="text-gray-700">
-          Sinh viên có thể nhắn tin, bình luận và đánh giá tài liệu trong môi trường an toàn.
-        </p>
-      </div>
-
-      <div class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="600">
-        <div class="mb-4">
-          <svg class="w-12 h-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-            </path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Xác Thực Sinh Viên</h3>
-        <p class="text-gray-700">
-          Đăng nhập bằng email <code>@hcmut.edu.vn</code> để đảm bảo tính riêng tư và xác thực nội bộ.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CÔNG NGHỆ -->
-  <section id="tech" class="max-w-7xl mx-auto px-6 py-12">
-    <h2 class="text-4xl font-bold text-darken mb-12 text-center">⚙️ Công Nghệ Sử Dụng</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
-      <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition">
-        <div class="text-5xl mb-4">⚛️</div>
-        <h3 class="text-xl font-bold mb-2">Frontend</h3>
-        <p class="text-sm text-gray-600">React Native</p>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition">
-        <div class="text-5xl mb-4">🐍</div>
-        <h3 class="text-xl font-bold mb-2">Backend</h3>
-        <p class="text-sm text-gray-600">NodeJS, NestJS</p>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition">
-        <div class="text-5xl mb-4">💾</div>
-        <h3 class="text-xl font-bold mb-2">Database</h3>
-        <p class="text-sm text-gray-600">PostgreSQL</p>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition">
-        <div class="text-5xl mb-4">🐳</div>
-        <h3 class="text-xl font-bold mb-2">DevOps</h3>
-        <p class="text-sm text-gray-600">Docker, GitHub Actions</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUY TRÌNH -->
-  <section class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-lg shadow my-12">
-    <h2 class="text-4xl font-bold text-darken mb-12 text-center">🔄 Quy Trình Hoạt Động</h2>
-    <div class="grid md:grid-cols-4 gap-4" data-aos="fade-up">
-      <div class="text-center">
-        <div
-          class="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-          1</div>
-        <h4 class="font-bold">Đăng Nhập</h4>
-        <p class="text-sm text-gray-700">Xác thực bằng email sinh viên</p>
-      </div>
-      <div class="flex justify-center items-center"><span class="text-4xl text-yellow-500">→</span></div>
-      <div class="text-center">
-        <div
-          class="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-          2</div>
-        <h4 class="font-bold">Tìm Kiếm</h4>
-        <p class="text-sm text-gray-700">Lọc tài liệu theo tag hoặc môn học</p>
-      </div>
-      <div class="flex justify-center items-center"><span class="text-4xl text-yellow-500">→</span></div>
-      <div class="text-center">
-        <div
-          class="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-          3</div>
-        <h4 class="font-bold">Chia Sẻ</h4>
-        <p class="text-sm text-gray-700">Upload học liệu, chia sẻ nhanh</p>
-      </div>
-      <div class="flex justify-center items-center"><span class="text-4xl text-yellow-500">→</span></div>
-      <div class="text-center">
-        <div
-          class="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-          4</div>
-        <h4 class="font-bold">Cộng Tác</h4>
-        <p class="text-sm text-gray-700">Bình luận, đánh giá, kết nối nhóm</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section id="team" class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-lg shadow">
-    <h2 class="text-4xl font-bold text-darken mb-12 text-center">👥 Nhóm Phát Triển</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
-      <div class="text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl">👨‍💻
-        </div>
-        <h3 class="font-bold">Trần Nam Sơn</h3>
-      </div>
-      <div class="text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl">👩‍💻
-        </div>
-        <h3 class="font-bold">Hồ Quốc Khương</h3>
-      </div>
-      <div class="text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl">👨‍💼
-        </div>
-        <h3 class="font-bold">Phạm Quốc Toàn</h3>
-      </div>
-      <div class="text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl">👩‍🔬
-        </div>
-        <h3 class="font-bold">Nguyễn Phúc Bình</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="max-w-7xl mx-auto px-6 py-12">
-    <div
-      class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white rounded-lg p-12 shadow-lg flex flex-col items-center text-center"
-      data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8">🚀 Bắt Đầu Ngay</h2>
-
-      <div class="flex flex-wrap justify-around w-full mb-8 gap-8">
-        <div class="flex flex-col items-center">
-          <div class="text-4xl mb-4">💻</div>
-          <h3 class="font-bold mb-2">Repository</h3>
-          <a href="https://github.com/L01-AAA/StudyShare" class="underline hover:opacity-80">
-            github.com/L01-AAA/StudyShare
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="text-4xl mb-4">📖</div>
-          <h3 class="font-bold mb-2">Wiki</h3>
-          <a href="https://github.com/L01-AAA/StudyShare/wiki" class="underline hover:opacity-80">
-            Xem tài liệu dự án
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="text-4xl mb-4">🚪</div>
-          <h3 class="font-bold mb-2">Ứng Dụng</h3>
-          <button class="bg-white text-yellow-500 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
-            Truy Cập Ứng Dụng
-          </button>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#intro"
+            class="bg-white text-yellow-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >Khám Phá Ngay</a
+          >
+          <a
+            href="#contact"
+            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-yellow-500 transition"
+            >Xem Demo</a
+          >
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-
-  <footer class="bg-darken text-white py-12 mt-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+    <!-- GIỚI THIỆU -->
+    <section id="intro" class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
         <div>
-          <h4 class="text-lg font-bold mb-4 text-yellow-400">StudyShare</h4>
-          <p class="text-sm text-gray-300">Nền tảng chia sẻ tài liệu học tập cho sinh viên</p>
+          <h2 class="text-4xl font-bold text-darken mb-6">
+            Giới Thiệu StudyShare
+          </h2>
+          <p class="text-lg text-gray-700 mb-4">
+            <strong>Vấn đề:</strong> Sinh viên đang chia sẻ học liệu rải rác
+            trên nhiều nền tảng như Facebook, Zalo, Telegram — khiến việc tìm
+            kiếm tài liệu trở nên mất thời gian và thiếu hiệu quả.
+          </p>
+          <p class="text-lg text-gray-700 mb-4">
+            <strong>Giải pháp:</strong> StudyShare cung cấp không gian tập trung
+            giúp sinh viên dễ dàng đăng, tìm và trao đổi tài liệu, sách hoặc
+            dụng cụ học tập.
+          </p>
+          <p class="text-lg text-gray-700">
+            <strong>Tầm nhìn:</strong> Trở thành nền tảng học liệu nội bộ uy tín
+            cho sinh viên Bách Khoa, hướng tới mở rộng toàn trường.
+          </p>
         </div>
-
-        <div>
-          <h4 class="text-lg font-bold mb-4 text-yellow-400">Liên Kết</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">Trang Chủ</a></li>
-            <li><a href="#features" class="text-gray-300 hover:text-yellow-400">Tính Năng</a></li>
-            <li><a href="#tech" class="text-gray-300 hover:text-yellow-400">Công Nghệ</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-bold mb-4 text-yellow-400">Theo Dõi</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">Facebook</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">GitHub</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">LinkedIn</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-bold mb-4 text-yellow-400">Thông Tin</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">Điều Khoản</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">Chính Sách</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-yellow-400">Hỗ Trợ</a></li>
-          </ul>
+        <div class="bg-yellow-100 rounded-lg p-8">
+          <img
+            src="https://amzn-web-programming-bucket.s3.ap-southeast-2.amazonaws.com/instroduction.png"
+            alt="StudyShare"
+            class="rounded-lg shadow-lg"
+            onerror="this.src='https://via.placeholder.com/400x300?text=StudyShare'"
+          />
         </div>
       </div>
+    </section>
 
-      <div class="border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
-        © 2025 StudyShare. All rights reserved. | Made with ❤️ by Team StudyShare
+    <!-- TÍNH NĂNG -->
+    <section
+      id="features"
+      class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-xl shadow my-12"
+    >
+      <h2 class="text-4xl font-bold text-darken mb-12 text-center">
+        Tính Năng Chính
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition"
+          data-aos="fade-up"
+        >
+          <div class="mb-4">
+            <svg
+              class="w-12 h-12 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Quản Lý & Chia Sẻ Học Liệu</h3>
+          <p class="text-gray-700">
+            Đăng và tải xuống tài liệu, hình ảnh, giáo trình — được sắp xếp rõ
+            ràng theo môn học và chủ đề.
+          </p>
+        </div>
+
+        <div
+          class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="mb-4">
+            <svg
+              class="w-12 h-12 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Tìm Kiếm & Lọc Thông Minh</h3>
+          <p class="text-gray-700">
+            Tìm tài liệu theo từ khóa, tag, bộ môn hoặc loại học liệu. Gợi ý học
+            liệu liên quan tự động.
+          </p>
+        </div>
+
+        <div
+          class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="mb-4">
+            <svg
+              class="w-12 h-12 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Đánh Giá & Trao Đổi</h3>
+          <p class="text-gray-700">
+            Sinh viên có thể nhắn tin, bình luận và đánh giá tài liệu trong môi
+            trường an toàn.
+          </p>
+        </div>
+
+        <div
+          class="bg-yellow-50 p-8 rounded-lg hover:shadow-lg transition"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <div class="mb-4">
+            <svg
+              class="w-12 h-12 text-yellow-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Xác Thực Sinh Viên</h3>
+          <p class="text-gray-700">
+            Đăng nhập bằng email <code>@hcmut.edu.vn</code> để đảm bảo tính
+            riêng tư và xác thực nội bộ.
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script>
-    AOS.init({         // bắt đầu hiệu ứng khi cuộn tới 100px
-    });
-  </script>
+    <!-- CÔNG NGHỆ -->
+    <section id="tech" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-4xl font-bold text-darken mb-12 text-center">
+        ⚙️ Công Nghệ Sử Dụng
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+        >
+          <div class="text-5xl mb-4">⚛️</div>
+          <h3 class="text-xl font-bold mb-2">Frontend</h3>
+          <p class="text-sm text-gray-600">React Native</p>
+        </div>
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+        >
+          <div class="text-5xl mb-4">🐍</div>
+          <h3 class="text-xl font-bold mb-2">Backend</h3>
+          <p class="text-sm text-gray-600">NodeJS, NestJS</p>
+        </div>
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+        >
+          <div class="text-5xl mb-4">💾</div>
+          <h3 class="text-xl font-bold mb-2">Database</h3>
+          <p class="text-sm text-gray-600">PostgreSQL</p>
+        </div>
+        <div
+          class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition"
+        >
+          <div class="text-5xl mb-4">🐳</div>
+          <h3 class="text-xl font-bold mb-2">DevOps</h3>
+          <p class="text-sm text-gray-600">Docker, GitHub Actions</p>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- QUY TRÌNH - HORIZONTAL (responsive -> stacked on small screens) -->
+    <section
+      class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-lg shadow my-12"
+    >
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-8 text-center">
+        🔄 Quy Trình Hoạt Động
+      </h2>
 
+      <!-- Container: md+ = horizontal flex with arrows; <md = vertical stack -->
+      <div class="w-full" data-aos="fade-up" aria-label="Quy trình 4 bước">
+        <div
+          class="flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-4"
+        >
+          <!-- Step 1 -->
+          <div
+            class="flex flex-col items-center text-center md:text-left md:items-center md:flex-1"
+          >
+            <div
+              class="bg-yellow-500 text-white rounded-full w-20 h-20 flex items-center justify-center text-2xl font-bold shadow-md transform transition-transform hover:scale-105"
+            >
+              1
+            </div>
+            <h4 class="font-semibold mt-3">Đăng Nhập</h4>
+            <p class="text-sm text-gray-600 mt-1">
+              Xác thực bằng email sinh viên
+            </p>
+          </div>
+
+          <!-- Arrow (horizontal on md, vertical on small screens) -->
+          <div
+            class="flex items-center justify-center md:justify-center md:flex-initial"
+          >
+            <!-- horizontal arrow shown on md+, hidden on small -->
+            <svg
+              class="hidden md:block w-10 h-10 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="12" x2="17" y2="12"></line>
+              <polyline points="10 5 17 12 10 19"></polyline>
+            </svg>
+
+            <!-- vertical arrow shown on small screens -->
+            <svg
+              class="block md:hidden w-6 h-6 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="3" x2="12" y2="17"></line>
+              <polyline points="5 10 12 17 19 10"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="flex flex-col items-center text-center md:text-left md:items-center md:flex-1"
+          >
+            <div
+              class="bg-yellow-500 text-white rounded-full w-20 h-20 flex items-center justify-center text-2xl font-bold shadow-md transform transition-transform hover:scale-105"
+            >
+              2
+            </div>
+            <h4 class="font-semibold mt-3">Tìm Kiếm</h4>
+            <p class="text-sm text-gray-600 mt-1">
+              Lọc tài liệu theo tag hoặc môn học
+            </p>
+          </div>
+
+          <!-- Arrow -->
+          <div
+            class="flex items-center justify-center md:justify-center md:flex-initial"
+          >
+            <svg
+              class="hidden md:block w-10 h-10 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="12" x2="17" y2="12"></line>
+              <polyline points="10 5 17 12 10 19"></polyline>
+            </svg>
+            <svg
+              class="block md:hidden w-6 h-6 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="3" x2="12" y2="17"></line>
+              <polyline points="5 10 12 17 19 10"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="flex flex-col items-center text-center md:text-left md:items-center md:flex-1"
+          >
+            <div
+              class="bg-yellow-500 text-white rounded-full w-20 h-20 flex items-center justify-center text-2xl font-bold shadow-md transform transition-transform hover:scale-105"
+            >
+              3
+            </div>
+            <h4 class="font-semibold mt-3">Chia Sẻ</h4>
+            <p class="text-sm text-gray-600 mt-1">
+              Upload học liệu, chia sẻ nhanh
+            </p>
+          </div>
+
+          <!-- Arrow -->
+          <div
+            class="flex items-center justify-center md:justify-center md:flex-initial"
+          >
+            <svg
+              class="hidden md:block w-10 h-10 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="12" x2="17" y2="12"></line>
+              <polyline points="10 5 17 12 10 19"></polyline>
+            </svg>
+            <svg
+              class="block md:hidden w-6 h-6 text-yellow-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="3" x2="12" y2="17"></line>
+              <polyline points="5 10 12 17 19 10"></polyline>
+            </svg>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="flex flex-col items-center text-center md:text-left md:items-center md:flex-1"
+          >
+            <div
+              class="bg-yellow-500 text-white rounded-full w-20 h-20 flex items-center justify-center text-2xl font-bold shadow-md transform transition-transform hover:scale-105"
+            >
+              4
+            </div>
+            <h4 class="font-semibold mt-3">Cộng Tác</h4>
+            <p class="text-sm text-gray-600 mt-1">
+              Bình luận, đánh giá, kết nối nhóm
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots / Demo -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-4xl font-bold text-darken mb-12 text-center">
+        Giao Diện Onboarding
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+        <div
+          class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+        >
+          <img
+            src="img/my_img/Launch screem.png"
+            alt="Launch screen"
+            class="w-full h-full object-cover"
+            onerror="this.src='https://via.placeholder.com/400x250?text=Trang+Chủ'"
+          />
+          <div class="p-4 bg-white">
+            <h3 class="font-bold text-darken">Trang Chủ</h3>
+            <p class="text-sm text-gray-600">
+              Giao diện chính với tính năng tìm kiếm
+            </p>
+          </div>
+        </div>
+        <div
+          class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+        >
+          <img
+            src="img/my_img/Onboarding1.png"
+            alt="Onboarding 1"
+            class="w-full h-full object-cover"
+            onerror="this.src='https://via.placeholder.com/400x250?text=Nhóm+Học+Tập'"
+          />
+          <div class="p-4 bg-white">
+            <h3 class="font-bold text-darken">Nhóm Học Tập</h3>
+            <p class="text-sm text-gray-600">Cộng tác trong không gian riêng</p>
+          </div>
+        </div>
+        <div
+          class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+        >
+          <img
+            src="img/my_img/Onboarding3.png"
+            alt="Onboarding 2"
+            class="w-full h-full object-cover"
+            onerror="this.src='https://via.placeholder.com/400x250?text=Tài+Liệu'"
+          />
+          <div class="p-4 bg-white">
+            <h3 class="font-bold text-darken">Quản Lý Tài Liệu</h3>
+            <p class="text-sm text-gray-600">Tổ chức và chia sẻ tài liệu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section
+      id="team"
+      class="max-w-7xl mx-auto px-6 py-12 bg-white rounded-lg shadow"
+    >
+      <h2 class="text-4xl font-bold text-darken mb-12 text-center">
+        👥 Nhóm Phát Triển
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <div class="text-center">
+          <div
+            class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl"
+          >
+            👨‍💻
+          </div>
+          <h3 class="font-bold">Trần Nam Sơn</h3>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl"
+          >
+            👩‍💻
+          </div>
+          <h3 class="font-bold">Hồ Quốc Khương</h3>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl"
+          >
+            👨‍💼
+          </div>
+          <h3 class="font-bold">Phạm Quốc Toàn</h3>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-24 h-24 mx-auto mb-4 rounded-full bg-yellow-100 flex items-center justify-center text-4xl"
+          >
+            👩‍🔬
+          </div>
+          <h3 class="font-bold">Nguyễn Phúc Bình</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-12">
+      <div
+        class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white rounded-lg p-12 shadow-lg flex flex-col items-center text-center"
+        data-aos="fade-up"
+      >
+        <h2 class="text-4xl font-bold mb-8">🚀 Bắt Đầu Ngay</h2>
+
+        <div class="flex flex-wrap justify-around w-full mb-8 gap-8">
+          <div class="flex flex-col items-center">
+            <div class="text-4xl mb-4">💻</div>
+            <h3 class="font-bold mb-2">Repository</h3>
+            <a
+              href="https://github.com/L01-AAA/StudyShare"
+              class="underline hover:opacity-80"
+            >
+              github.com/L01-AAA/StudyShare
+            </a>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-4xl mb-4">📖</div>
+            <h3 class="font-bold mb-2">Wiki</h3>
+            <a
+              href="https://github.com/L01-AAA/StudyShare/wiki"
+              class="underline hover:opacity-80"
+            >
+              Xem tài liệu dự án
+            </a>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="text-4xl mb-4">🚪</div>
+            <h3 class="font-bold mb-2">Ứng Dụng</h3>
+            <button
+              class="bg-white text-yellow-500 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+            >
+              Truy Cập Ứng Dụng
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-darken text-white py-12 mt-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left"
+        >
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-yellow-400">StudyShare</h4>
+            <p class="text-sm text-gray-300">
+              Nền tảng chia sẻ tài liệu học tập cho sinh viên
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-yellow-400">Liên Kết</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li>
+                <a href="#features" class="text-gray-300 hover:text-yellow-400"
+                  >Tính Năng</a
+                >
+              </li>
+              <li>
+                <a href="#tech" class="text-gray-300 hover:text-yellow-400"
+                  >Công Nghệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-yellow-400">Theo Dõi</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-yellow-400">Thông Tin</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >Điều Khoản</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >Chính Sách</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-yellow-400"
+                  >Hỗ Trợ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-600 pt-6 text-center text-sm text-gray-400"
+        >
+          © 2025 StudyShare. All rights reserved. | Made with ❤️ by Team
+          StudyShare
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init({
+        // bắt đầu hiệu ứng khi cuộn tới 100px
+      });
+    </script>
+  </body>
 </html>
